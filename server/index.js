@@ -72,6 +72,7 @@ passport.deserializeUser(function(obj, done) {
 //books
 app.get('/api/books', bookCtrl.getAllBooks);
 app.post('/api/books', bookCtrl.addBook);
+app.get('/api/books/:book_id', bookCtrl.getBook);
 app.put('/api/books/:book_id', bookCtrl.editBook);
 app.delete('/api/shelf', bookCtrl.removeFromShelf);
 app.post('/api/shelf', bookCtrl.addToShelf);
