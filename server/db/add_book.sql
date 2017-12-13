@@ -1,0 +1,1 @@
+insert into books (title, author, book_description, genre, image_url, user_id, inventory) values ($1, $2, $3, $4, $5, $6, 10)
