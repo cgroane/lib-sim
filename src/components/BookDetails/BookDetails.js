@@ -18,6 +18,10 @@ class BookDetails extends Component {
         return (
             <div>
                 {this.props.selectedBook.title}, {this.props.selectedBook.author}
+                <button onClick={() => this.props.addBookToCart(this.props.selectedBook)} >
+                    Add to Cart
+                </button>
+                
             </div>
         )
     }

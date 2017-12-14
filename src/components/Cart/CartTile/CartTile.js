@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import * as BookReducer from './../../../ducks/reducer';
 
-class BrowseTile extends Component {
+class CartTile extends Component {
     constructor(props){
         super(props)
     }
@@ -12,7 +12,6 @@ class BrowseTile extends Component {
         return (
             <div>
                 <Link to={`/${this.props.id}/details`} >{this.props.title}</Link>
-                
             </div>
         )
     }
@@ -20,4 +19,4 @@ class BrowseTile extends Component {
 
 const mapStateToProps = state => state;
 
-export default connect(mapStateToProps, BookReducer)(BrowseTile)
+export default connect(mapStateToProps, BookReducer)(CartTile)

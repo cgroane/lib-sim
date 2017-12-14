@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import BrowseTile from  './../BrowseTile/BrowseTile';
+import CartTile from  './../CartTile/CartTile';
 import * as BookReducer from './../../../ducks/reducer';
-import { Link } from 'react-router-dom';
 
 
 
-class BrowseView extends Component {
+class CartView extends Component {
     constructor(props) {
         super(props);
 
@@ -17,19 +16,18 @@ class BrowseView extends Component {
     }
 
     render(){
-        var bookDisplay = this.props.books.map((cur, ind) => {
+        var cartDisplay = this.props.cart.map((cur, ind) => {
             return (
-                <BrowseTile key={ind} title={cur.title} id={cur.book_id} />
+                <CartTile key={ind} title={cur.title} id={cur.book_id} />
             )
         })
         return (
             <div>
-                
-                {bookDisplay}
+                {cartDisplay}
             </div>
         )
     }
 }
 const mapStateToProps = state => state
 
-export default connect(mapStateToProps, BookReducer)(BrowseView)
+export default connect(mapStateToProps, BookReducer)(CartView)

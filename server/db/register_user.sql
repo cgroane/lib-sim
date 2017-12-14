@@ -1,0 +1,1 @@
+insert into users (username, pw) values ($1, $2);

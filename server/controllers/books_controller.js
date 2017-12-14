@@ -15,7 +15,7 @@ module.exports = {
     editBook: function(req, res, next) {
         const dbInstance = req.app.get('db')
 
-        dbInstance.edit_book([req.body.title, req.body.author, req.body.book_description, req.body.genre, s.body.image_url, req.params.book_id, req.body.inventory, req.body.user_id])
+        dbInstance.edit_book([req.body.title, req.body.author, req.body.book_description, req.body.genre, req.body.image_url, req.params.book_id, req.body.inventory, req.body.user_id])
         .then((book) => {
             req.book = book[0]
             res.status(200).send(book[0])
